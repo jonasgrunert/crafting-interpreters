@@ -1,0 +1,28 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "PRINT","lexeme": "print","literal": null,"line": 1},
+{"type": "NUMBER","lexeme": "123","literal": 123.0,"line": 1},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 1},
+{"type": "PRINT","lexeme": "print","literal": null,"line": 2},
+{"type": "NUMBER","lexeme": "987654","literal": 987654.0,"line": 2},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 2},
+{"type": "PRINT","lexeme": "print","literal": null,"line": 3},
+{"type": "NUMBER","lexeme": "0","literal": 0.0,"line": 3},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 3},
+{"type": "PRINT","lexeme": "print","literal": null,"line": 4},
+{"type": "MINUS","lexeme": "-","literal": null,"line": 4},
+{"type": "NUMBER","lexeme": "0","literal": 0.0,"line": 4},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 4},
+{"type": "PRINT","lexeme": "print","literal": null,"line": 6},
+{"type": "NUMBER","lexeme": "123.456","literal": 123.456,"line": 6},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 6},
+{"type": "PRINT","lexeme": "print","literal": null,"line": 7},
+{"type": "MINUS","lexeme": "-","literal": null,"line": 7},
+{"type": "NUMBER","lexeme": "0.001","literal": 0.001,"line": 7},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 7},
+{"type": "EOF","lexeme": "","literal": null,"line": 8}
+]
+}

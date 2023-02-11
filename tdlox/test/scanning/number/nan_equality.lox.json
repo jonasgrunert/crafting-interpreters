@@ -1,0 +1,35 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "VAR","lexeme": "var","literal": null,"line": 1},
+{"type": "IDENTIFIER","lexeme": "nan","literal": null,"line": 1},
+{"type": "EQUAL","lexeme": "=","literal": null,"line": 1},
+{"type": "NUMBER","lexeme": "0","literal": 0.0,"line": 1},
+{"type": "SLASH","lexeme": "/","literal": null,"line": 1},
+{"type": "NUMBER","lexeme": "0","literal": 0.0,"line": 1},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 1},
+{"type": "PRINT","lexeme": "print","literal": null,"line": 3},
+{"type": "IDENTIFIER","lexeme": "nan","literal": null,"line": 3},
+{"type": "EQUAL_EQUAL","lexeme": "==","literal": null,"line": 3},
+{"type": "NUMBER","lexeme": "0","literal": 0.0,"line": 3},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 3},
+{"type": "PRINT","lexeme": "print","literal": null,"line": 4},
+{"type": "IDENTIFIER","lexeme": "nan","literal": null,"line": 4},
+{"type": "BANG_EQUAL","lexeme": "!=","literal": null,"line": 4},
+{"type": "NUMBER","lexeme": "1","literal": 1.0,"line": 4},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 4},
+{"type": "PRINT","lexeme": "print","literal": null,"line": 7},
+{"type": "IDENTIFIER","lexeme": "nan","literal": null,"line": 7},
+{"type": "EQUAL_EQUAL","lexeme": "==","literal": null,"line": 7},
+{"type": "IDENTIFIER","lexeme": "nan","literal": null,"line": 7},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 7},
+{"type": "PRINT","lexeme": "print","literal": null,"line": 8},
+{"type": "IDENTIFIER","lexeme": "nan","literal": null,"line": 8},
+{"type": "BANG_EQUAL","lexeme": "!=","literal": null,"line": 8},
+{"type": "IDENTIFIER","lexeme": "nan","literal": null,"line": 8},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 8},
+{"type": "EOF","lexeme": "","literal": null,"line": 9}
+]
+}

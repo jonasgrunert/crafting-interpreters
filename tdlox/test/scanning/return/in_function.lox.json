@@ -1,0 +1,25 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "FUN","lexeme": "fun","literal": null,"line": 1},
+{"type": "IDENTIFIER","lexeme": "f","literal": null,"line": 1},
+{"type": "LEFT_PAREN","lexeme": "(","literal": null,"line": 1},
+{"type": "RIGHT_PAREN","lexeme": ")","literal": null,"line": 1},
+{"type": "LEFT_BRACE","lexeme": "{","literal": null,"line": 1},
+{"type": "RETURN","lexeme": "return","literal": null,"line": 2},
+{"type": "STRING","lexeme": "\"ok\"","literal": "ok","line": 2},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 2},
+{"type": "PRINT","lexeme": "print","literal": null,"line": 3},
+{"type": "STRING","lexeme": "\"bad\"","literal": "bad","line": 3},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 3},
+{"type": "RIGHT_BRACE","lexeme": "}","literal": null,"line": 4},
+{"type": "PRINT","lexeme": "print","literal": null,"line": 6},
+{"type": "IDENTIFIER","lexeme": "f","literal": null,"line": 6},
+{"type": "LEFT_PAREN","lexeme": "(","literal": null,"line": 6},
+{"type": "RIGHT_PAREN","lexeme": ")","literal": null,"line": 6},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 6},
+{"type": "EOF","lexeme": "","literal": null,"line": 7}
+]
+}

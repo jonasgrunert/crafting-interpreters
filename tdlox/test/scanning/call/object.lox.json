@@ -1,0 +1,23 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "CLASS","lexeme": "class","literal": null,"line": 1},
+{"type": "IDENTIFIER","lexeme": "Foo","literal": null,"line": 1},
+{"type": "LEFT_BRACE","lexeme": "{","literal": null,"line": 1},
+{"type": "RIGHT_BRACE","lexeme": "}","literal": null,"line": 1},
+{"type": "VAR","lexeme": "var","literal": null,"line": 3},
+{"type": "IDENTIFIER","lexeme": "foo","literal": null,"line": 3},
+{"type": "EQUAL","lexeme": "=","literal": null,"line": 3},
+{"type": "IDENTIFIER","lexeme": "Foo","literal": null,"line": 3},
+{"type": "LEFT_PAREN","lexeme": "(","literal": null,"line": 3},
+{"type": "RIGHT_PAREN","lexeme": ")","literal": null,"line": 3},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 3},
+{"type": "IDENTIFIER","lexeme": "foo","literal": null,"line": 4},
+{"type": "LEFT_PAREN","lexeme": "(","literal": null,"line": 4},
+{"type": "RIGHT_PAREN","lexeme": ")","literal": null,"line": 4},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 4},
+{"type": "EOF","lexeme": "","literal": null,"line": 5}
+]
+}

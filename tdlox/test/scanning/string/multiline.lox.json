@@ -1,0 +1,16 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "VAR","lexeme": "var","literal": null,"line": 1},
+{"type": "IDENTIFIER","lexeme": "a","literal": null,"line": 1},
+{"type": "EQUAL","lexeme": "=","literal": null,"line": 1},
+{"type": "STRING","lexeme": "\"1\n2\n3\"","literal": "1\n2\n3","line": 3},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 3},
+{"type": "PRINT","lexeme": "print","literal": null,"line": 4},
+{"type": "IDENTIFIER","lexeme": "a","literal": null,"line": 4},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 4},
+{"type": "EOF","lexeme": "","literal": null,"line": 8}
+]
+}

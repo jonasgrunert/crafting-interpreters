@@ -1,0 +1,36 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "CLASS","lexeme": "class","literal": null,"line": 1},
+{"type": "IDENTIFIER","lexeme": "A","literal": null,"line": 1},
+{"type": "LEFT_BRACE","lexeme": "{","literal": null,"line": 1},
+{"type": "IDENTIFIER","lexeme": "method","literal": null,"line": 2},
+{"type": "LEFT_PAREN","lexeme": "(","literal": null,"line": 2},
+{"type": "RIGHT_PAREN","lexeme": ")","literal": null,"line": 2},
+{"type": "LEFT_BRACE","lexeme": "{","literal": null,"line": 2},
+{"type": "RIGHT_BRACE","lexeme": "}","literal": null,"line": 2},
+{"type": "RIGHT_BRACE","lexeme": "}","literal": null,"line": 3},
+{"type": "CLASS","lexeme": "class","literal": null,"line": 5},
+{"type": "IDENTIFIER","lexeme": "B","literal": null,"line": 5},
+{"type": "LESS","lexeme": "<","literal": null,"line": 5},
+{"type": "IDENTIFIER","lexeme": "A","literal": null,"line": 5},
+{"type": "LEFT_BRACE","lexeme": "{","literal": null,"line": 5},
+{"type": "IDENTIFIER","lexeme": "method","literal": null,"line": 6},
+{"type": "LEFT_PAREN","lexeme": "(","literal": null,"line": 6},
+{"type": "RIGHT_PAREN","lexeme": ")","literal": null,"line": 6},
+{"type": "LEFT_BRACE","lexeme": "{","literal": null,"line": 6},
+{"type": "LEFT_PAREN","lexeme": "(","literal": null,"line": 8},
+{"type": "SUPER","lexeme": "super","literal": null,"line": 8},
+{"type": "RIGHT_PAREN","lexeme": ")","literal": null,"line": 8},
+{"type": "DOT","lexeme": ".","literal": null,"line": 8},
+{"type": "IDENTIFIER","lexeme": "method","literal": null,"line": 8},
+{"type": "LEFT_PAREN","lexeme": "(","literal": null,"line": 8},
+{"type": "RIGHT_PAREN","lexeme": ")","literal": null,"line": 8},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 8},
+{"type": "RIGHT_BRACE","lexeme": "}","literal": null,"line": 9},
+{"type": "RIGHT_BRACE","lexeme": "}","literal": null,"line": 10},
+{"type": "EOF","lexeme": "","literal": null,"line": 11}
+]
+}

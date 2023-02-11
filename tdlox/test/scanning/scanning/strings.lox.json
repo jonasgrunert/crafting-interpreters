@@ -1,0 +1,10 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "STRING","lexeme": "\"\"","literal": "","line": 1},
+{"type": "STRING","lexeme": "\"string\"","literal": "string","line": 2},
+{"type": "EOF","lexeme": "","literal": null,"line": 6}
+]
+}

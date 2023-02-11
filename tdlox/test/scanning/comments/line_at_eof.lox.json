@@ -1,0 +1,11 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "PRINT","lexeme": "print","literal": null,"line": 1},
+{"type": "STRING","lexeme": "\"ok\"","literal": "ok","line": 1},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 1},
+{"type": "EOF","lexeme": "","literal": null,"line": 2}
+]
+}

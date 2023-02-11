@@ -1,0 +1,25 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "FOR","lexeme": "for","literal": null,"line": 3},
+{"type": "LEFT_PAREN","lexeme": "(","literal": null,"line": 3},
+{"type": "LEFT_BRACE","lexeme": "{","literal": null,"line": 3},
+{"type": "RIGHT_BRACE","lexeme": "}","literal": null,"line": 3},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 3},
+{"type": "IDENTIFIER","lexeme": "a","literal": null,"line": 3},
+{"type": "LESS","lexeme": "<","literal": null,"line": 3},
+{"type": "NUMBER","lexeme": "2","literal": 2.0,"line": 3},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 3},
+{"type": "IDENTIFIER","lexeme": "a","literal": null,"line": 3},
+{"type": "EQUAL","lexeme": "=","literal": null,"line": 3},
+{"type": "IDENTIFIER","lexeme": "a","literal": null,"line": 3},
+{"type": "PLUS","lexeme": "+","literal": null,"line": 3},
+{"type": "NUMBER","lexeme": "1","literal": 1.0,"line": 3},
+{"type": "RIGHT_PAREN","lexeme": ")","literal": null,"line": 3},
+{"type": "LEFT_BRACE","lexeme": "{","literal": null,"line": 3},
+{"type": "RIGHT_BRACE","lexeme": "}","literal": null,"line": 3},
+{"type": "EOF","lexeme": "","literal": null,"line": 4}
+]
+}

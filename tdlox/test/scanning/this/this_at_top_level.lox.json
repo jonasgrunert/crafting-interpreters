@@ -1,0 +1,10 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "THIS","lexeme": "this","literal": null,"line": 1},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 1},
+{"type": "EOF","lexeme": "","literal": null,"line": 2}
+]
+}

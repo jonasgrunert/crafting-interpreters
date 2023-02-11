@@ -1,0 +1,11 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "PRINT","lexeme": "print","literal": null,"line": 1},
+{"type": "IDENTIFIER","lexeme": "notDefined","literal": null,"line": 1},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 1},
+{"type": "EOF","lexeme": "","literal": null,"line": 2}
+]
+}

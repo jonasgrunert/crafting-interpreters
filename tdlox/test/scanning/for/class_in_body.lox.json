@@ -1,0 +1,17 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "FOR","lexeme": "for","literal": null,"line": 2},
+{"type": "LEFT_PAREN","lexeme": "(","literal": null,"line": 2},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 2},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 2},
+{"type": "RIGHT_PAREN","lexeme": ")","literal": null,"line": 2},
+{"type": "CLASS","lexeme": "class","literal": null,"line": 2},
+{"type": "IDENTIFIER","lexeme": "Foo","literal": null,"line": 2},
+{"type": "LEFT_BRACE","lexeme": "{","literal": null,"line": 2},
+{"type": "RIGHT_BRACE","lexeme": "}","literal": null,"line": 2},
+{"type": "EOF","lexeme": "","literal": null,"line": 3}
+]
+}

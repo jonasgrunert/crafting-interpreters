@@ -1,0 +1,24 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "FUN","lexeme": "fun","literal": null,"line": 3},
+{"type": "IDENTIFIER","lexeme": "foo","literal": null,"line": 3},
+{"type": "LEFT_PAREN","lexeme": "(","literal": null,"line": 3},
+{"type": "IDENTIFIER","lexeme": "a","literal": null,"line": 3},
+{"type": "COMMA","lexeme": ",","literal": null,"line": 3},
+{"type": "IDENTIFIER","lexeme": "b","literal": null,"line": 3},
+{"type": "IDENTIFIER","lexeme": "c","literal": null,"line": 3},
+{"type": "COMMA","lexeme": ",","literal": null,"line": 3},
+{"type": "IDENTIFIER","lexeme": "d","literal": null,"line": 3},
+{"type": "COMMA","lexeme": ",","literal": null,"line": 3},
+{"type": "IDENTIFIER","lexeme": "e","literal": null,"line": 3},
+{"type": "COMMA","lexeme": ",","literal": null,"line": 3},
+{"type": "IDENTIFIER","lexeme": "f","literal": null,"line": 3},
+{"type": "RIGHT_PAREN","lexeme": ")","literal": null,"line": 3},
+{"type": "LEFT_BRACE","lexeme": "{","literal": null,"line": 3},
+{"type": "RIGHT_BRACE","lexeme": "}","literal": null,"line": 3},
+{"type": "EOF","lexeme": "","literal": null,"line": 4}
+]
+}

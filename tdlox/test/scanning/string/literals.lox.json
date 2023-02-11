@@ -1,0 +1,29 @@
+{
+  "errors": [],
+  "tokens": [
+    { "type": "PRINT", "lexeme": "print", "literal": null, "line": 1 },
+    { "type": "STRING", "lexeme": "\"(\"", "literal": "(", "line": 1 },
+    { "type": "PLUS", "lexeme": "+", "literal": null, "line": 1 },
+    { "type": "STRING", "lexeme": "\"\"", "literal": "", "line": 1 },
+    { "type": "PLUS", "lexeme": "+", "literal": null, "line": 1 },
+    { "type": "STRING", "lexeme": "\")\"", "literal": ")", "line": 1 },
+    { "type": "SEMICOLON", "lexeme": ";", "literal": null, "line": 1 },
+    { "type": "PRINT", "lexeme": "print", "literal": null, "line": 2 },
+    {
+      "type": "STRING",
+      "lexeme": "\"a string\"",
+      "literal": "a string",
+      "line": 2
+    },
+    { "type": "SEMICOLON", "lexeme": ";", "literal": null, "line": 2 },
+    { "type": "PRINT", "lexeme": "print", "literal": null, "line": 5 },
+    {
+      "type": "STRING",
+      "lexeme": "\"A~¶Þॐஃ\"",
+      "literal": "A~¶Þॐஃ",
+      "line": 5
+    },
+    { "type": "SEMICOLON", "lexeme": ";", "literal": null, "line": 5 },
+    { "type": "EOF", "lexeme": "", "literal": null, "line": 6 }
+  ]
+}

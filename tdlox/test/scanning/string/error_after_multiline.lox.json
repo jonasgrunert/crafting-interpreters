@@ -1,0 +1,15 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "VAR","lexeme": "var","literal": null,"line": 2},
+{"type": "IDENTIFIER","lexeme": "a","literal": null,"line": 2},
+{"type": "EQUAL","lexeme": "=","literal": null,"line": 2},
+{"type": "STRING","lexeme": "\"1\n2\n3\n\"","literal": "1\n2\n3\n","line": 5},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 5},
+{"type": "IDENTIFIER","lexeme": "err","literal": null,"line": 7},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 7},
+{"type": "EOF","lexeme": "","literal": null,"line": 7}
+]
+}

@@ -1,0 +1,15 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "CLASS","lexeme": "class","literal": null,"line": 1},
+{"type": "IDENTIFIER","lexeme": "Foo","literal": null,"line": 1},
+{"type": "LEFT_BRACE","lexeme": "{","literal": null,"line": 1},
+{"type": "RIGHT_BRACE","lexeme": "}","literal": null,"line": 1},
+{"type": "PRINT","lexeme": "print","literal": null,"line": 3},
+{"type": "IDENTIFIER","lexeme": "Foo","literal": null,"line": 3},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 3},
+{"type": "EOF","lexeme": "","literal": null,"line": 4}
+]
+}

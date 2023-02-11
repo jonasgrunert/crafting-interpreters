@@ -1,0 +1,26 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "LEFT_PAREN","lexeme": "(","literal": null,"line": 1},
+{"type": "RIGHT_PAREN","lexeme": ")","literal": null,"line": 1},
+{"type": "LEFT_BRACE","lexeme": "{","literal": null,"line": 1},
+{"type": "RIGHT_BRACE","lexeme": "}","literal": null,"line": 1},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 1},
+{"type": "COMMA","lexeme": ",","literal": null,"line": 1},
+{"type": "PLUS","lexeme": "+","literal": null,"line": 1},
+{"type": "MINUS","lexeme": "-","literal": null,"line": 1},
+{"type": "STAR","lexeme": "*","literal": null,"line": 1},
+{"type": "BANG_EQUAL","lexeme": "!=","literal": null,"line": 1},
+{"type": "EQUAL_EQUAL","lexeme": "==","literal": null,"line": 1},
+{"type": "LESS_EQUAL","lexeme": "<=","literal": null,"line": 1},
+{"type": "GREATER_EQUAL","lexeme": ">=","literal": null,"line": 1},
+{"type": "BANG_EQUAL","lexeme": "!=","literal": null,"line": 1},
+{"type": "LESS","lexeme": "<","literal": null,"line": 1},
+{"type": "GREATER","lexeme": ">","literal": null,"line": 1},
+{"type": "SLASH","lexeme": "/","literal": null,"line": 1},
+{"type": "DOT","lexeme": ".","literal": null,"line": 1},
+{"type": "EOF","lexeme": "","literal": null,"line": 22}
+]
+}

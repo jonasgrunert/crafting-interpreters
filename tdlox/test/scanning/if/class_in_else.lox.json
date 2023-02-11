@@ -1,0 +1,19 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "IF","lexeme": "if","literal": null,"line": 2},
+{"type": "LEFT_PAREN","lexeme": "(","literal": null,"line": 2},
+{"type": "TRUE","lexeme": "true","literal": null,"line": 2},
+{"type": "RIGHT_PAREN","lexeme": ")","literal": null,"line": 2},
+{"type": "STRING","lexeme": "\"ok\"","literal": "ok","line": 2},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 2},
+{"type": "ELSE","lexeme": "else","literal": null,"line": 2},
+{"type": "CLASS","lexeme": "class","literal": null,"line": 2},
+{"type": "IDENTIFIER","lexeme": "Foo","literal": null,"line": 2},
+{"type": "LEFT_BRACE","lexeme": "{","literal": null,"line": 2},
+{"type": "RIGHT_BRACE","lexeme": "}","literal": null,"line": 2},
+{"type": "EOF","lexeme": "","literal": null,"line": 3}
+]
+}

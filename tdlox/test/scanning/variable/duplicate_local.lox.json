@@ -1,0 +1,20 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "LEFT_BRACE","lexeme": "{","literal": null,"line": 1},
+{"type": "VAR","lexeme": "var","literal": null,"line": 2},
+{"type": "IDENTIFIER","lexeme": "a","literal": null,"line": 2},
+{"type": "EQUAL","lexeme": "=","literal": null,"line": 2},
+{"type": "STRING","lexeme": "\"value\"","literal": "value","line": 2},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 2},
+{"type": "VAR","lexeme": "var","literal": null,"line": 3},
+{"type": "IDENTIFIER","lexeme": "a","literal": null,"line": 3},
+{"type": "EQUAL","lexeme": "=","literal": null,"line": 3},
+{"type": "STRING","lexeme": "\"other\"","literal": "other","line": 3},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 3},
+{"type": "RIGHT_BRACE","lexeme": "}","literal": null,"line": 4},
+{"type": "EOF","lexeme": "","literal": null,"line": 5}
+]
+}

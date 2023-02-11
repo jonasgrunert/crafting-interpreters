@@ -1,0 +1,14 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "NIL","lexeme": "nil","literal": null,"line": 1},
+{"type": "DOT","lexeme": ".","literal": null,"line": 1},
+{"type": "IDENTIFIER","lexeme": "foo","literal": null,"line": 1},
+{"type": "EQUAL","lexeme": "=","literal": null,"line": 1},
+{"type": "STRING","lexeme": "\"value\"","literal": "value","line": 1},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 1},
+{"type": "EOF","lexeme": "","literal": null,"line": 2}
+]
+}

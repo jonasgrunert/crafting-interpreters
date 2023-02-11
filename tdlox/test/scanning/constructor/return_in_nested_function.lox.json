@@ -1,0 +1,36 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "CLASS","lexeme": "class","literal": null,"line": 1},
+{"type": "IDENTIFIER","lexeme": "Foo","literal": null,"line": 1},
+{"type": "LEFT_BRACE","lexeme": "{","literal": null,"line": 1},
+{"type": "IDENTIFIER","lexeme": "init","literal": null,"line": 2},
+{"type": "LEFT_PAREN","lexeme": "(","literal": null,"line": 2},
+{"type": "RIGHT_PAREN","lexeme": ")","literal": null,"line": 2},
+{"type": "LEFT_BRACE","lexeme": "{","literal": null,"line": 2},
+{"type": "FUN","lexeme": "fun","literal": null,"line": 3},
+{"type": "IDENTIFIER","lexeme": "init","literal": null,"line": 3},
+{"type": "LEFT_PAREN","lexeme": "(","literal": null,"line": 3},
+{"type": "RIGHT_PAREN","lexeme": ")","literal": null,"line": 3},
+{"type": "LEFT_BRACE","lexeme": "{","literal": null,"line": 3},
+{"type": "RETURN","lexeme": "return","literal": null,"line": 4},
+{"type": "STRING","lexeme": "\"bar\"","literal": "bar","line": 4},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 4},
+{"type": "RIGHT_BRACE","lexeme": "}","literal": null,"line": 5},
+{"type": "PRINT","lexeme": "print","literal": null,"line": 6},
+{"type": "IDENTIFIER","lexeme": "init","literal": null,"line": 6},
+{"type": "LEFT_PAREN","lexeme": "(","literal": null,"line": 6},
+{"type": "RIGHT_PAREN","lexeme": ")","literal": null,"line": 6},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 6},
+{"type": "RIGHT_BRACE","lexeme": "}","literal": null,"line": 7},
+{"type": "RIGHT_BRACE","lexeme": "}","literal": null,"line": 8},
+{"type": "PRINT","lexeme": "print","literal": null,"line": 10},
+{"type": "IDENTIFIER","lexeme": "Foo","literal": null,"line": 10},
+{"type": "LEFT_PAREN","lexeme": "(","literal": null,"line": 10},
+{"type": "RIGHT_PAREN","lexeme": ")","literal": null,"line": 10},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 10},
+{"type": "EOF","lexeme": "","literal": null,"line": 11}
+]
+}

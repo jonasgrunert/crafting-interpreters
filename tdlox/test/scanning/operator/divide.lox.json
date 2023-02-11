@@ -1,0 +1,18 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "PRINT","lexeme": "print","literal": null,"line": 1},
+{"type": "NUMBER","lexeme": "8","literal": 8.0,"line": 1},
+{"type": "SLASH","lexeme": "/","literal": null,"line": 1},
+{"type": "NUMBER","lexeme": "2","literal": 2.0,"line": 1},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 1},
+{"type": "PRINT","lexeme": "print","literal": null,"line": 2},
+{"type": "NUMBER","lexeme": "12.34","literal": 12.34,"line": 2},
+{"type": "SLASH","lexeme": "/","literal": null,"line": 2},
+{"type": "NUMBER","lexeme": "12.34","literal": 12.34,"line": 2},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 2},
+{"type": "EOF","lexeme": "","literal": null,"line": 3}
+]
+}

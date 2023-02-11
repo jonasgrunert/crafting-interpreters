@@ -1,0 +1,13 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "LEFT_BRACE","lexeme": "{","literal": null,"line": 1},
+{"type": "PRINT","lexeme": "print","literal": null,"line": 2},
+{"type": "IDENTIFIER","lexeme": "notDefined","literal": null,"line": 2},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 2},
+{"type": "RIGHT_BRACE","lexeme": "}","literal": null,"line": 3},
+{"type": "EOF","lexeme": "","literal": null,"line": 4}
+]
+}

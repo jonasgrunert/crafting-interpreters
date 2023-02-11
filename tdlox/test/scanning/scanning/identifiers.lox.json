@@ -1,0 +1,16 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "IDENTIFIER","lexeme": "andy","literal": null,"line": 1},
+{"type": "IDENTIFIER","lexeme": "formless","literal": null,"line": 1},
+{"type": "IDENTIFIER","lexeme": "fo","literal": null,"line": 1},
+{"type": "IDENTIFIER","lexeme": "_","literal": null,"line": 1},
+{"type": "IDENTIFIER","lexeme": "_123","literal": null,"line": 1},
+{"type": "IDENTIFIER","lexeme": "_abc","literal": null,"line": 1},
+{"type": "IDENTIFIER","lexeme": "ab123","literal": null,"line": 1},
+{"type": "IDENTIFIER","lexeme": "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890_","literal": null,"line": 2},
+{"type": "EOF","lexeme": "","literal": null,"line": 13}
+]
+}

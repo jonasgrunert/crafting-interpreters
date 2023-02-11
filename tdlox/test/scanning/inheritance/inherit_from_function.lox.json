@@ -1,0 +1,20 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "FUN","lexeme": "fun","literal": null,"line": 1},
+{"type": "IDENTIFIER","lexeme": "foo","literal": null,"line": 1},
+{"type": "LEFT_PAREN","lexeme": "(","literal": null,"line": 1},
+{"type": "RIGHT_PAREN","lexeme": ")","literal": null,"line": 1},
+{"type": "LEFT_BRACE","lexeme": "{","literal": null,"line": 1},
+{"type": "RIGHT_BRACE","lexeme": "}","literal": null,"line": 1},
+{"type": "CLASS","lexeme": "class","literal": null,"line": 3},
+{"type": "IDENTIFIER","lexeme": "Subclass","literal": null,"line": 3},
+{"type": "LESS","lexeme": "<","literal": null,"line": 3},
+{"type": "IDENTIFIER","lexeme": "foo","literal": null,"line": 3},
+{"type": "LEFT_BRACE","lexeme": "{","literal": null,"line": 3},
+{"type": "RIGHT_BRACE","lexeme": "}","literal": null,"line": 3},
+{"type": "EOF","lexeme": "","literal": null,"line": 4}
+]
+}

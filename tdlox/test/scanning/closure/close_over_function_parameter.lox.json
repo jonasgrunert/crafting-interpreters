@@ -1,0 +1,40 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "VAR","lexeme": "var","literal": null,"line": 1},
+{"type": "IDENTIFIER","lexeme": "f","literal": null,"line": 1},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 1},
+{"type": "FUN","lexeme": "fun","literal": null,"line": 3},
+{"type": "IDENTIFIER","lexeme": "foo","literal": null,"line": 3},
+{"type": "LEFT_PAREN","lexeme": "(","literal": null,"line": 3},
+{"type": "IDENTIFIER","lexeme": "param","literal": null,"line": 3},
+{"type": "RIGHT_PAREN","lexeme": ")","literal": null,"line": 3},
+{"type": "LEFT_BRACE","lexeme": "{","literal": null,"line": 3},
+{"type": "FUN","lexeme": "fun","literal": null,"line": 4},
+{"type": "IDENTIFIER","lexeme": "f_","literal": null,"line": 4},
+{"type": "LEFT_PAREN","lexeme": "(","literal": null,"line": 4},
+{"type": "RIGHT_PAREN","lexeme": ")","literal": null,"line": 4},
+{"type": "LEFT_BRACE","lexeme": "{","literal": null,"line": 4},
+{"type": "PRINT","lexeme": "print","literal": null,"line": 5},
+{"type": "IDENTIFIER","lexeme": "param","literal": null,"line": 5},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 5},
+{"type": "RIGHT_BRACE","lexeme": "}","literal": null,"line": 6},
+{"type": "IDENTIFIER","lexeme": "f","literal": null,"line": 7},
+{"type": "EQUAL","lexeme": "=","literal": null,"line": 7},
+{"type": "IDENTIFIER","lexeme": "f_","literal": null,"line": 7},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 7},
+{"type": "RIGHT_BRACE","lexeme": "}","literal": null,"line": 8},
+{"type": "IDENTIFIER","lexeme": "foo","literal": null,"line": 9},
+{"type": "LEFT_PAREN","lexeme": "(","literal": null,"line": 9},
+{"type": "STRING","lexeme": "\"param\"","literal": "param","line": 9},
+{"type": "RIGHT_PAREN","lexeme": ")","literal": null,"line": 9},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 9},
+{"type": "IDENTIFIER","lexeme": "f","literal": null,"line": 11},
+{"type": "LEFT_PAREN","lexeme": "(","literal": null,"line": 11},
+{"type": "RIGHT_PAREN","lexeme": ")","literal": null,"line": 11},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 11},
+{"type": "EOF","lexeme": "","literal": null,"line": 12}
+]
+}

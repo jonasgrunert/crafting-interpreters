@@ -1,0 +1,12 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "IDENTIFIER","lexeme": "space","literal": null,"line": 1},
+{"type": "IDENTIFIER","lexeme": "tabs","literal": null,"line": 1},
+{"type": "IDENTIFIER","lexeme": "newlines","literal": null,"line": 1},
+{"type": "IDENTIFIER","lexeme": "end","literal": null,"line": 6},
+{"type": "EOF","lexeme": "","literal": null,"line": 13}
+]
+}

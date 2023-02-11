@@ -1,0 +1,11 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "NUMBER","lexeme": "123","literal": 123.0,"line": 2},
+{"type": "DOT","lexeme": ".","literal": null,"line": 2},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 2},
+{"type": "EOF","lexeme": "","literal": null,"line": 3}
+]
+}

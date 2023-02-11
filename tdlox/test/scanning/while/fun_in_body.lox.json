@@ -1,0 +1,18 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "WHILE","lexeme": "while","literal": null,"line": 2},
+{"type": "LEFT_PAREN","lexeme": "(","literal": null,"line": 2},
+{"type": "TRUE","lexeme": "true","literal": null,"line": 2},
+{"type": "RIGHT_PAREN","lexeme": ")","literal": null,"line": 2},
+{"type": "FUN","lexeme": "fun","literal": null,"line": 2},
+{"type": "IDENTIFIER","lexeme": "foo","literal": null,"line": 2},
+{"type": "LEFT_PAREN","lexeme": "(","literal": null,"line": 2},
+{"type": "RIGHT_PAREN","lexeme": ")","literal": null,"line": 2},
+{"type": "LEFT_BRACE","lexeme": "{","literal": null,"line": 2},
+{"type": "RIGHT_BRACE","lexeme": "}","literal": null,"line": 2},
+{"type": "EOF","lexeme": "","literal": null,"line": 3}
+]
+}

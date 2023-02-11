@@ -1,0 +1,6 @@
+{
+  "tasks": {
+    "run": "deno run -A tdlox/index.ts",
+    "test": "deno test -A tdlox/test.ts"
+  }
+}

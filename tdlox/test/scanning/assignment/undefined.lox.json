@@ -1,0 +1,12 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "IDENTIFIER","lexeme": "unknown","literal": null,"line": 1},
+{"type": "EQUAL","lexeme": "=","literal": null,"line": 1},
+{"type": "STRING","lexeme": "\"what\"","literal": "what","line": 1},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 1},
+{"type": "EOF","lexeme": "","literal": null,"line": 2}
+]
+}

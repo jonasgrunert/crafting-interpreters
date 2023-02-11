@@ -1,0 +1,35 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "CLASS","lexeme": "class","literal": null,"line": 1},
+{"type": "IDENTIFIER","lexeme": "Foo","literal": null,"line": 1},
+{"type": "LEFT_BRACE","lexeme": "{","literal": null,"line": 1},
+{"type": "IDENTIFIER","lexeme": "init","literal": null,"line": 2},
+{"type": "LEFT_PAREN","lexeme": "(","literal": null,"line": 2},
+{"type": "RIGHT_PAREN","lexeme": ")","literal": null,"line": 2},
+{"type": "LEFT_BRACE","lexeme": "{","literal": null,"line": 2},
+{"type": "PRINT","lexeme": "print","literal": null,"line": 3},
+{"type": "STRING","lexeme": "\"init\"","literal": "init","line": 3},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 3},
+{"type": "RETURN","lexeme": "return","literal": null,"line": 4},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 4},
+{"type": "PRINT","lexeme": "print","literal": null,"line": 5},
+{"type": "STRING","lexeme": "\"nope\"","literal": "nope","line": 5},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 5},
+{"type": "RIGHT_BRACE","lexeme": "}","literal": null,"line": 6},
+{"type": "RIGHT_BRACE","lexeme": "}","literal": null,"line": 7},
+{"type": "VAR","lexeme": "var","literal": null,"line": 9},
+{"type": "IDENTIFIER","lexeme": "foo","literal": null,"line": 9},
+{"type": "EQUAL","lexeme": "=","literal": null,"line": 9},
+{"type": "IDENTIFIER","lexeme": "Foo","literal": null,"line": 9},
+{"type": "LEFT_PAREN","lexeme": "(","literal": null,"line": 9},
+{"type": "RIGHT_PAREN","lexeme": ")","literal": null,"line": 9},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 9},
+{"type": "PRINT","lexeme": "print","literal": null,"line": 10},
+{"type": "IDENTIFIER","lexeme": "foo","literal": null,"line": 10},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 10},
+{"type": "EOF","lexeme": "","literal": null,"line": 11}
+]
+}

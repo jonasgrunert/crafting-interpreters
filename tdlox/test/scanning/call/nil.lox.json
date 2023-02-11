@@ -1,0 +1,12 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "NIL","lexeme": "nil","literal": null,"line": 1},
+{"type": "LEFT_PAREN","lexeme": "(","literal": null,"line": 1},
+{"type": "RIGHT_PAREN","lexeme": ")","literal": null,"line": 1},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 1},
+{"type": "EOF","lexeme": "","literal": null,"line": 2}
+]
+}

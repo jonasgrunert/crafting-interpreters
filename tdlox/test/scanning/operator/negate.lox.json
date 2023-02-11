@@ -1,0 +1,29 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "PRINT","lexeme": "print","literal": null,"line": 1},
+{"type": "MINUS","lexeme": "-","literal": null,"line": 1},
+{"type": "LEFT_PAREN","lexeme": "(","literal": null,"line": 1},
+{"type": "NUMBER","lexeme": "3","literal": 3.0,"line": 1},
+{"type": "RIGHT_PAREN","lexeme": ")","literal": null,"line": 1},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 1},
+{"type": "PRINT","lexeme": "print","literal": null,"line": 2},
+{"type": "MINUS","lexeme": "-","literal": null,"line": 2},
+{"type": "MINUS","lexeme": "-","literal": null,"line": 2},
+{"type": "LEFT_PAREN","lexeme": "(","literal": null,"line": 2},
+{"type": "NUMBER","lexeme": "3","literal": 3.0,"line": 2},
+{"type": "RIGHT_PAREN","lexeme": ")","literal": null,"line": 2},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 2},
+{"type": "PRINT","lexeme": "print","literal": null,"line": 3},
+{"type": "MINUS","lexeme": "-","literal": null,"line": 3},
+{"type": "MINUS","lexeme": "-","literal": null,"line": 3},
+{"type": "MINUS","lexeme": "-","literal": null,"line": 3},
+{"type": "LEFT_PAREN","lexeme": "(","literal": null,"line": 3},
+{"type": "NUMBER","lexeme": "3","literal": 3.0,"line": 3},
+{"type": "RIGHT_PAREN","lexeme": ")","literal": null,"line": 3},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 3},
+{"type": "EOF","lexeme": "","literal": null,"line": 4}
+]
+}

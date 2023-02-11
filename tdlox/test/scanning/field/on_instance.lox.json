@@ -1,0 +1,43 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "CLASS","lexeme": "class","literal": null,"line": 1},
+{"type": "IDENTIFIER","lexeme": "Foo","literal": null,"line": 1},
+{"type": "LEFT_BRACE","lexeme": "{","literal": null,"line": 1},
+{"type": "RIGHT_BRACE","lexeme": "}","literal": null,"line": 1},
+{"type": "VAR","lexeme": "var","literal": null,"line": 3},
+{"type": "IDENTIFIER","lexeme": "foo","literal": null,"line": 3},
+{"type": "EQUAL","lexeme": "=","literal": null,"line": 3},
+{"type": "IDENTIFIER","lexeme": "Foo","literal": null,"line": 3},
+{"type": "LEFT_PAREN","lexeme": "(","literal": null,"line": 3},
+{"type": "RIGHT_PAREN","lexeme": ")","literal": null,"line": 3},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 3},
+{"type": "PRINT","lexeme": "print","literal": null,"line": 5},
+{"type": "IDENTIFIER","lexeme": "foo","literal": null,"line": 5},
+{"type": "DOT","lexeme": ".","literal": null,"line": 5},
+{"type": "IDENTIFIER","lexeme": "bar","literal": null,"line": 5},
+{"type": "EQUAL","lexeme": "=","literal": null,"line": 5},
+{"type": "STRING","lexeme": "\"bar value\"","literal": "bar value","line": 5},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 5},
+{"type": "PRINT","lexeme": "print","literal": null,"line": 6},
+{"type": "IDENTIFIER","lexeme": "foo","literal": null,"line": 6},
+{"type": "DOT","lexeme": ".","literal": null,"line": 6},
+{"type": "IDENTIFIER","lexeme": "baz","literal": null,"line": 6},
+{"type": "EQUAL","lexeme": "=","literal": null,"line": 6},
+{"type": "STRING","lexeme": "\"baz value\"","literal": "baz value","line": 6},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 6},
+{"type": "PRINT","lexeme": "print","literal": null,"line": 8},
+{"type": "IDENTIFIER","lexeme": "foo","literal": null,"line": 8},
+{"type": "DOT","lexeme": ".","literal": null,"line": 8},
+{"type": "IDENTIFIER","lexeme": "bar","literal": null,"line": 8},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 8},
+{"type": "PRINT","lexeme": "print","literal": null,"line": 9},
+{"type": "IDENTIFIER","lexeme": "foo","literal": null,"line": 9},
+{"type": "DOT","lexeme": ".","literal": null,"line": 9},
+{"type": "IDENTIFIER","lexeme": "baz","literal": null,"line": 9},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 9},
+{"type": "EOF","lexeme": "","literal": null,"line": 10}
+]
+}

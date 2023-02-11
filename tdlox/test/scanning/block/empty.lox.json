@@ -1,0 +1,28 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "LEFT_BRACE","lexeme": "{","literal": null,"line": 1},
+{"type": "RIGHT_BRACE","lexeme": "}","literal": null,"line": 1},
+{"type": "IF","lexeme": "if","literal": null,"line": 4},
+{"type": "LEFT_PAREN","lexeme": "(","literal": null,"line": 4},
+{"type": "TRUE","lexeme": "true","literal": null,"line": 4},
+{"type": "RIGHT_PAREN","lexeme": ")","literal": null,"line": 4},
+{"type": "LEFT_BRACE","lexeme": "{","literal": null,"line": 4},
+{"type": "RIGHT_BRACE","lexeme": "}","literal": null,"line": 4},
+{"type": "IF","lexeme": "if","literal": null,"line": 5},
+{"type": "LEFT_PAREN","lexeme": "(","literal": null,"line": 5},
+{"type": "FALSE","lexeme": "false","literal": null,"line": 5},
+{"type": "RIGHT_PAREN","lexeme": ")","literal": null,"line": 5},
+{"type": "LEFT_BRACE","lexeme": "{","literal": null,"line": 5},
+{"type": "RIGHT_BRACE","lexeme": "}","literal": null,"line": 5},
+{"type": "ELSE","lexeme": "else","literal": null,"line": 5},
+{"type": "LEFT_BRACE","lexeme": "{","literal": null,"line": 5},
+{"type": "RIGHT_BRACE","lexeme": "}","literal": null,"line": 5},
+{"type": "PRINT","lexeme": "print","literal": null,"line": 7},
+{"type": "STRING","lexeme": "\"ok\"","literal": "ok","line": 7},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 7},
+{"type": "EOF","lexeme": "","literal": null,"line": 8}
+]
+}

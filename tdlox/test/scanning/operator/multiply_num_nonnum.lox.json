@@ -1,0 +1,12 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "NUMBER","lexeme": "1","literal": 1.0,"line": 1},
+{"type": "STAR","lexeme": "*","literal": null,"line": 1},
+{"type": "STRING","lexeme": "\"1\"","literal": "1","line": 1},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 1},
+{"type": "EOF","lexeme": "","literal": null,"line": 2}
+]
+}

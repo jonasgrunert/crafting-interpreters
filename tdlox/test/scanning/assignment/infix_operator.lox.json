@@ -1,0 +1,24 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "VAR","lexeme": "var","literal": null,"line": 1},
+{"type": "IDENTIFIER","lexeme": "a","literal": null,"line": 1},
+{"type": "EQUAL","lexeme": "=","literal": null,"line": 1},
+{"type": "STRING","lexeme": "\"a\"","literal": "a","line": 1},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 1},
+{"type": "VAR","lexeme": "var","literal": null,"line": 2},
+{"type": "IDENTIFIER","lexeme": "b","literal": null,"line": 2},
+{"type": "EQUAL","lexeme": "=","literal": null,"line": 2},
+{"type": "STRING","lexeme": "\"b\"","literal": "b","line": 2},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 2},
+{"type": "IDENTIFIER","lexeme": "a","literal": null,"line": 3},
+{"type": "PLUS","lexeme": "+","literal": null,"line": 3},
+{"type": "IDENTIFIER","lexeme": "b","literal": null,"line": 3},
+{"type": "EQUAL","lexeme": "=","literal": null,"line": 3},
+{"type": "STRING","lexeme": "\"value\"","literal": "value","line": 3},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 3},
+{"type": "EOF","lexeme": "","literal": null,"line": 4}
+]
+}

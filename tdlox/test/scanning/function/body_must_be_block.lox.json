@@ -1,0 +1,14 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "FUN","lexeme": "fun","literal": null,"line": 3},
+{"type": "IDENTIFIER","lexeme": "f","literal": null,"line": 3},
+{"type": "LEFT_PAREN","lexeme": "(","literal": null,"line": 3},
+{"type": "RIGHT_PAREN","lexeme": ")","literal": null,"line": 3},
+{"type": "NUMBER","lexeme": "123","literal": 123.0,"line": 3},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 3},
+{"type": "EOF","lexeme": "","literal": null,"line": 4}
+]
+}

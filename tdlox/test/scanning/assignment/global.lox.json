@@ -1,0 +1,31 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "VAR","lexeme": "var","literal": null,"line": 1},
+{"type": "IDENTIFIER","lexeme": "a","literal": null,"line": 1},
+{"type": "EQUAL","lexeme": "=","literal": null,"line": 1},
+{"type": "STRING","lexeme": "\"before\"","literal": "before","line": 1},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 1},
+{"type": "PRINT","lexeme": "print","literal": null,"line": 2},
+{"type": "IDENTIFIER","lexeme": "a","literal": null,"line": 2},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 2},
+{"type": "IDENTIFIER","lexeme": "a","literal": null,"line": 4},
+{"type": "EQUAL","lexeme": "=","literal": null,"line": 4},
+{"type": "STRING","lexeme": "\"after\"","literal": "after","line": 4},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 4},
+{"type": "PRINT","lexeme": "print","literal": null,"line": 5},
+{"type": "IDENTIFIER","lexeme": "a","literal": null,"line": 5},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 5},
+{"type": "PRINT","lexeme": "print","literal": null,"line": 7},
+{"type": "IDENTIFIER","lexeme": "a","literal": null,"line": 7},
+{"type": "EQUAL","lexeme": "=","literal": null,"line": 7},
+{"type": "STRING","lexeme": "\"arg\"","literal": "arg","line": 7},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 7},
+{"type": "PRINT","lexeme": "print","literal": null,"line": 8},
+{"type": "IDENTIFIER","lexeme": "a","literal": null,"line": 8},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 8},
+{"type": "EOF","lexeme": "","literal": null,"line": 9}
+]
+}

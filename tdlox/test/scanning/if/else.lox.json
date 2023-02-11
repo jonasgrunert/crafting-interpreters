@@ -1,0 +1,42 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "IF","lexeme": "if","literal": null,"line": 2},
+{"type": "LEFT_PAREN","lexeme": "(","literal": null,"line": 2},
+{"type": "TRUE","lexeme": "true","literal": null,"line": 2},
+{"type": "RIGHT_PAREN","lexeme": ")","literal": null,"line": 2},
+{"type": "PRINT","lexeme": "print","literal": null,"line": 2},
+{"type": "STRING","lexeme": "\"good\"","literal": "good","line": 2},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 2},
+{"type": "ELSE","lexeme": "else","literal": null,"line": 2},
+{"type": "PRINT","lexeme": "print","literal": null,"line": 2},
+{"type": "STRING","lexeme": "\"bad\"","literal": "bad","line": 2},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 2},
+{"type": "IF","lexeme": "if","literal": null,"line": 3},
+{"type": "LEFT_PAREN","lexeme": "(","literal": null,"line": 3},
+{"type": "FALSE","lexeme": "false","literal": null,"line": 3},
+{"type": "RIGHT_PAREN","lexeme": ")","literal": null,"line": 3},
+{"type": "PRINT","lexeme": "print","literal": null,"line": 3},
+{"type": "STRING","lexeme": "\"bad\"","literal": "bad","line": 3},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 3},
+{"type": "ELSE","lexeme": "else","literal": null,"line": 3},
+{"type": "PRINT","lexeme": "print","literal": null,"line": 3},
+{"type": "STRING","lexeme": "\"good\"","literal": "good","line": 3},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 3},
+{"type": "IF","lexeme": "if","literal": null,"line": 6},
+{"type": "LEFT_PAREN","lexeme": "(","literal": null,"line": 6},
+{"type": "FALSE","lexeme": "false","literal": null,"line": 6},
+{"type": "RIGHT_PAREN","lexeme": ")","literal": null,"line": 6},
+{"type": "NIL","lexeme": "nil","literal": null,"line": 6},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 6},
+{"type": "ELSE","lexeme": "else","literal": null,"line": 6},
+{"type": "LEFT_BRACE","lexeme": "{","literal": null,"line": 6},
+{"type": "PRINT","lexeme": "print","literal": null,"line": 6},
+{"type": "STRING","lexeme": "\"block\"","literal": "block","line": 6},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 6},
+{"type": "RIGHT_BRACE","lexeme": "}","literal": null,"line": 6},
+{"type": "EOF","lexeme": "","literal": null,"line": 7}
+]
+}

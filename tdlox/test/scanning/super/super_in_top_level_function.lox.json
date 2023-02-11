@@ -1,0 +1,20 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "SUPER","lexeme": "super","literal": null,"line": 1},
+{"type": "DOT","lexeme": ".","literal": null,"line": 1},
+{"type": "IDENTIFIER","lexeme": "bar","literal": null,"line": 1},
+{"type": "LEFT_PAREN","lexeme": "(","literal": null,"line": 1},
+{"type": "RIGHT_PAREN","lexeme": ")","literal": null,"line": 1},
+{"type": "SEMICOLON","lexeme": ";","literal": null,"line": 1},
+{"type": "FUN","lexeme": "fun","literal": null,"line": 2},
+{"type": "IDENTIFIER","lexeme": "foo","literal": null,"line": 2},
+{"type": "LEFT_PAREN","lexeme": "(","literal": null,"line": 2},
+{"type": "RIGHT_PAREN","lexeme": ")","literal": null,"line": 2},
+{"type": "LEFT_BRACE","lexeme": "{","literal": null,"line": 2},
+{"type": "RIGHT_BRACE","lexeme": "}","literal": null,"line": 3},
+{"type": "EOF","lexeme": "","literal": null,"line": 3}
+]
+}

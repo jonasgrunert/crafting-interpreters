@@ -1,0 +1,14 @@
+{
+"errors": [
+
+],
+"tokens": [
+{"type": "NUMBER","lexeme": "123","literal": 123.0,"line": 1},
+{"type": "NUMBER","lexeme": "123.456","literal": 123.456,"line": 2},
+{"type": "DOT","lexeme": ".","literal": null,"line": 3},
+{"type": "NUMBER","lexeme": "456","literal": 456.0,"line": 3},
+{"type": "NUMBER","lexeme": "123","literal": 123.0,"line": 4},
+{"type": "DOT","lexeme": ".","literal": null,"line": 4},
+{"type": "EOF","lexeme": "","literal": null,"line": 13}
+]
+}
