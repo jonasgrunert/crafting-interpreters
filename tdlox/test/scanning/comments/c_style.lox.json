@@ -1,0 +1,21 @@
+{
+  "errors": [],
+  "tokens": [
+    { "type": "VAR", "lexeme": "var", "literal": null, "line": 1 },
+    { "type": "IDENTIFIER", "lexeme": "a", "literal": null, "line": 1 },
+    { "type": "EQUAL", "lexeme": "=", "literal": null, "line": 1 },
+    { "type": "STRING", "lexeme": "\"hello\"", "literal": "hello", "line": 1 },
+    { "type": "SEMICOLON", "lexeme": ";", "literal": null, "line": 1 },
+    { "type": "VAR", "lexeme": "var", "literal": null, "line": 3 },
+    { "type": "IDENTIFIER", "lexeme": "b", "literal": null, "line": 3 },
+    { "type": "EQUAL", "lexeme": "=", "literal": null, "line": 3 },
+    { "type": "NUMBER", "lexeme": "1", "literal": 1, "line": 3 },
+    { "type": "SEMICOLON", "lexeme": ";", "literal": null, "line": 3 },
+    { "type": "VAR", "lexeme": "var", "literal": null, "line": 5 },
+    { "type": "IDENTIFIER", "lexeme": "c", "literal": null, "line": 5 },
+    { "type": "EQUAL", "lexeme": "=", "literal": null, "line": 5 },
+    { "type": "NUMBER", "lexeme": "1", "literal": 1, "line": 5 },
+    { "type": "SEMICOLON", "lexeme": ";", "literal": null, "line": 5 },
+    { "type": "EOF", "lexeme": "", "literal": null, "line": 5 }
+  ]
+}

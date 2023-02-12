@@ -1,0 +1,4 @@
+{
+  "errors": ["[line 1] Error: Unterminated multiline comment."],
+  "tokens": [{ "type": "EOF", "lexeme": "", "literal": null, "line": 1 }]
+}

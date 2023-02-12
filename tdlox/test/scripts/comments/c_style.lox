@@ -1,0 +1,5 @@
+var a = "hello";
+/* An oneline comment */
+var b = 1; /* A multi line comment
+nobody really wants */
+var c /*this is a weird place*/ = 1;

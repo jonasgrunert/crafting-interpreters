@@ -93,6 +93,7 @@ export class Scanner {
   #start = 0;
   #current = 0;
   #line = 1;
+  readonly errors: string[] = [];
 
   constructor(source: string) {
     this.#source = source;
@@ -166,7 +167,24 @@ export class Scanner {
         break;
       case "/":
         if (this.#match("/")) {
-          while (this.#peek() != "\n" && !this.#isAtEnd) this.#advance();
+          while (this.#peek() !== "\n" && !this.#isAtEnd) this.#advance();
+        } else if (this.#match("*")) {
+          while (
+            this.#peek() !== "*" &&
+            this.#peekNext() !== "/" &&
+            !this.#isAtEnd
+          ) {
+            if (this.#peek() === "\n") this.#line++;
+            this.#advance();
+          }
+          if (this.#isAtEnd) {
+            this.errors.push(
+              error(this.#line, "Unterminated multiline comment."),
+            );
+            return;
+          }
+          this.#advance();
+          this.#advance();
         } else {
           this.#addToken(TokenType.SLASH);
         }
@@ -188,7 +206,7 @@ export class Scanner {
         } else if (this.#isAlpha(c)) {
           this.#identifier();
         } else {
-          error(this.#line, `Unexpected character.`);
+          this.errors.push(error(this.#line, `Unexpected character.`));
         }
         break;
     }
@@ -230,7 +248,7 @@ export class Scanner {
     }
 
     if (this.#isAtEnd) {
-      error(this.#line, "Unterminated string.");
+      this.errors.push(error(this.#line, "Unterminated string."));
       return;
     }
 

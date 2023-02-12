@@ -1,6 +1,9 @@
 import { walk } from "https://deno.land/std@0.177.0/fs/mod.ts";
 import { Scanner, Token } from "./scanner.ts";
-import { AssertionError } from "https://deno.land/std@0.177.0/testing/asserts.ts";
+import {
+  assertEquals,
+  AssertionError,
+} from "https://deno.land/std@0.177.0/testing/asserts.ts";
 
 const ROOT = "tdlox/test/scripts";
 
@@ -39,6 +42,7 @@ for await (const file of walk(ROOT, { includeDirs: false })) {
       ]);
       const scanner = new Scanner(source);
       assertTokens(expected.tokens, scanner.scanTokens());
+      assertEquals(scanner.errors, expected.errors);
     },
   );
 }
