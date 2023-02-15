@@ -1,73 +1,77 @@
 import { error } from "./error.ts";
 
-enum TokenType {
+const Tokens = [
   // Single-character tokens.
-  LEFT_PAREN = "LEFT_PAREN",
-  RIGHT_PAREN = "RIGHT_PAREN",
-  LEFT_BRACE = "LEFT_BRACE",
-  RIGHT_BRACE = "RIGHT_BRACE",
-  COMMA = "COMMA",
-  DOT = "DOT",
-  MINUS = "MINUS",
-  PLUS = "PLUS",
-  SEMICOLON = "SEMICOLON",
-  SLASH = "SLASH",
-  STAR = "STAR",
+  "LEFT_PAREN",
+  "RIGHT_PAREN",
+  "LEFT_BRACE",
+  "RIGHT_BRACE",
+  "COMMA",
+  "DOT",
+  "MINUS",
+  "PLUS",
+  "SEMICOLON",
+  "SLASH",
+  "STAR",
 
   // One or two character tokens.
-  BANG = "BANG",
-  BANG_EQUAL = "BANG_EQUAL",
-  EQUAL = "EQUAL",
-  EQUAL_EQUAL = "EQUAL_EQUAL",
-  GREATER = "GREATER",
-  GREATER_EQUAL = "GREATER_EQUAL",
-  LESS = "LESS",
-  LESS_EQUAL = "LESS_EQUAL",
+  "BANG",
+  "BANG_EQUAL",
+  "EQUAL",
+  "EQUAL_EQUAL",
+  "GREATER",
+  "GREATER_EQUAL",
+  "LESS",
+  "LESS_EQUAL",
 
   // Literals.
-  IDENTIFIER = "IDENTIFIER",
-  STRING = "STRING",
-  NUMBER = "NUMBER",
+  "IDENTIFIER",
+  "STRING",
+  "NUMBER",
 
   // Keywords.
-  AND = "AND",
-  CLASS = "CLASS",
-  ELSE = "ELSE",
-  FALSE = "FALSE",
-  FUN = "FUN",
-  FOR = "FOR",
-  IF = "IF",
-  NIL = "NIL",
-  OR = "OR",
-  PRINT = "PRINT",
-  RETURN = "RETURN",
-  SUPER = "SUPER",
-  THIS = "THIS",
-  TRUE = "TRUE",
-  VAR = "VAR",
-  WHILE = "WHILE",
+  "AND",
+  "CLASS",
+  "ELSE",
+  "FALSE",
+  "FUN",
+  "FOR",
+  "IF",
+  "NIL",
+  "OR",
+  "PRINT",
+  "RETURN",
+  "SUPER",
+  "THIS",
+  "TRUE",
+  "VAR",
+  "WHILE",
 
-  EOF = "EOF",
-}
+  "EOF",
+] as const;
 
-const keywords: Map<string, TokenType> = new Map([
-  ["and", TokenType.AND],
-  ["class", TokenType.CLASS],
-  ["else", TokenType.ELSE],
-  ["false", TokenType.FALSE],
-  ["for", TokenType.FOR],
-  ["fun", TokenType.FUN],
-  ["if", TokenType.IF],
-  ["nil", TokenType.NIL],
-  ["or", TokenType.OR],
-  ["print", TokenType.PRINT],
-  ["return", TokenType.RETURN],
-  ["super", TokenType.SUPER],
-  ["this", TokenType.THIS],
-  ["true", TokenType.TRUE],
-  ["var", TokenType.VAR],
-  ["while", TokenType.WHILE],
-]);
+type TokenType = typeof Tokens[number];
+
+const keywords: Map<string, TokenType> = new Map(
+  [
+    "and",
+    "class",
+    "else",
+    "false",
+    "for",
+    "fun",
+    "if",
+    "nil",
+    "or",
+    "print",
+    "return",
+    "super",
+    "this",
+    "true",
+    "var",
+    "while",
+  ].map((m) => [m, m.toUpperCase() as TokenType]),
+);
 
 export class Token {
   readonly type: TokenType;
@@ -108,7 +112,7 @@ export class Scanner {
       this.#start = this.#current;
       this.#scanToken();
     }
-    this.#tokens.push(new Token(TokenType.EOF, "", null, this.#line));
+    this.#tokens.push(new Token("EOF", "", null, this.#line));
     return this.#tokens;
   }
 
@@ -116,54 +120,46 @@ export class Scanner {
     const c = this.#advance();
     switch (c) {
       case "(":
-        this.#addToken(TokenType.LEFT_PAREN);
+        this.#addToken("LEFT_PAREN");
         break;
       case ")":
-        this.#addToken(TokenType.RIGHT_PAREN);
+        this.#addToken("RIGHT_PAREN");
         break;
       case "{":
-        this.#addToken(TokenType.LEFT_BRACE);
+        this.#addToken("LEFT_BRACE");
         break;
       case "}":
-        this.#addToken(TokenType.RIGHT_BRACE);
+        this.#addToken("RIGHT_BRACE");
         break;
       case ",":
-        this.#addToken(TokenType.COMMA);
+        this.#addToken("COMMA");
         break;
       case ".":
-        this.#addToken(TokenType.DOT);
+        this.#addToken("DOT");
         break;
       case "-":
-        this.#addToken(TokenType.MINUS);
+        this.#addToken("MINUS");
         break;
       case "+":
-        this.#addToken(TokenType.PLUS);
+        this.#addToken("PLUS");
         break;
       case ";":
-        this.#addToken(TokenType.SEMICOLON);
+        this.#addToken("SEMICOLON");
         break;
       case "*":
-        this.#addToken(TokenType.STAR);
+        this.#addToken("STAR");
         break;
       case "!":
-        this.#addToken(
-          this.#match("=") ? TokenType.BANG_EQUAL : TokenType.BANG,
-        );
+        this.#addToken(this.#match("=") ? "BANG_EQUAL" : "BANG");
         break;
       case "=":
-        this.#addToken(
-          this.#match("=") ? TokenType.EQUAL_EQUAL : TokenType.EQUAL,
-        );
+        this.#addToken(this.#match("=") ? "EQUAL_EQUAL" : "EQUAL");
         break;
       case "<":
-        this.#addToken(
-          this.#match("=") ? TokenType.LESS_EQUAL : TokenType.LESS,
-        );
+        this.#addToken(this.#match("=") ? "LESS_EQUAL" : "LESS");
         break;
       case ">":
-        this.#addToken(
-          this.#match("=") ? TokenType.GREATER_EQUAL : TokenType.GREATER,
-        );
+        this.#addToken(this.#match("=") ? "GREATER_EQUAL" : "GREATER");
         break;
       case "/":
         if (this.#match("/")) {
@@ -186,7 +182,7 @@ export class Scanner {
           this.#advance();
           this.#advance();
         } else {
-          this.#addToken(TokenType.SLASH);
+          this.#addToken("SLASH");
         }
         break;
       case " ":
@@ -254,7 +250,7 @@ export class Scanner {
 
     this.#advance();
     const value = this.#source.slice(this.#start + 1, this.#current - 1);
-    this.#addToken(TokenType.STRING, value);
+    this.#addToken("STRING", value);
   }
 
   #isDigit(c: string) {
@@ -270,7 +266,7 @@ export class Scanner {
     }
 
     this.#addToken(
-      TokenType.NUMBER,
+      "NUMBER",
       Number.parseFloat(this.#source.slice(this.#start, this.#current)),
     );
   }
@@ -278,7 +274,7 @@ export class Scanner {
   #identifier() {
     while (this.#isAlphaNumeric(this.#peek())) this.#advance();
     const text = this.#source.slice(this.#start, this.#current);
-    const token = keywords.get(text) ?? TokenType.IDENTIFIER;
+    const token = keywords.get(text) ?? "IDENTIFIER";
     this.#addToken(token);
   }
 
