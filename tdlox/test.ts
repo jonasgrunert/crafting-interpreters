@@ -1,5 +1,5 @@
 import { walk } from "https://deno.land/std@0.177.0/fs/mod.ts";
-import { Scanner, Token } from "./scanner.ts";
+import { scanTokens, Token } from "./scanner.ts";
 import {
   assertEquals,
   AssertionError,
@@ -40,9 +40,9 @@ for await (const file of walk(ROOT, { includeDirs: false })) {
           file.path.replace("scripts", "scanning") + ".json",
         ).then(JSON.parse) as Promise<{ tokens: Token[]; errors: string[] }>,
       ]);
-      const scanner = new Scanner(source);
-      assertTokens(expected.tokens, [...scanner.scanTokens()]);
-      assertEquals(scanner.errors, expected.errors);
+      const errors: string[] = [];
+      assertTokens(expected.tokens, [...scanTokens(source, errors)]);
+      assertEquals(errors, expected.errors);
     },
   );
 }

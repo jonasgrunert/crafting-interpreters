@@ -1,9 +1,7 @@
-import { Scanner } from "./scanner.ts";
+import { scanTokens } from "./scanner.ts";
 
 function run(source: string) {
-  const scanner = new Scanner(source);
-  const tokens = scanner.scanTokens();
-  for (const token of tokens) {
+  for (const token of scanTokens(source, [])) {
     console.log(token);
   }
   return 65;

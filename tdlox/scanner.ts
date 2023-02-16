@@ -100,7 +100,7 @@ const lexes = [
   }),
   createLex("UNKOWN_CHARACTER" as const, "\\S", {
     omit: true,
-    errors: () => "Unexpected charachter.",
+    errors: () => "Unexpected character.",
   }),
 ] as const;
 
@@ -120,7 +120,12 @@ export class Token {
   readonly literal: unknown;
   readonly line: number;
 
-  constructor(type: TokenType, lexeme: string, literal: unknown, line: number) {
+  constructor(
+    type: TokenType,
+    lexeme: string,
+    line: number,
+    literal: unknown = null,
+  ) {
     this.type = type;
     this.lexeme = lexeme;
     this.literal = literal;
@@ -132,43 +137,28 @@ export class Token {
   }
 }
 
-export class Scanner {
-  #source: string;
-  #line = 1;
-  readonly errors: string[] = [];
-
-  constructor(source: string) {
-    this.#source = source;
-  }
-
-  *scanTokens() {
-    let match: RegExpExecArray | null;
-    while ((match = tokenRegEx.exec(this.#source)) != null) {
-      const token = Object.keys(match.groups!).find(
-        (k) => match!.groups![k],
-      ) as TokenType;
-      const config = Tokens.get(token)!;
-      this.#line +=
-        typeof config.lines === "number"
-          ? config.lines
-          : config.lines(match[0]);
-      const errorString = config.errors?.(match[0]);
-      if (errorString) {
-        this.errors.push(error(this.#line, errorString));
-        continue;
-      }
-      if (!config.omit) {
-        if (config.toLiteral === null) {
-          yield this.#addToken(token, match[0]);
-        } else {
-          yield this.#addToken(token, match[0], config.toLiteral(match[0]));
-        }
+export function* scanTokens(source: string, errors: string[]) {
+  let lines = 1;
+  let match: RegExpExecArray | null;
+  while ((match = tokenRegEx.exec(source)) != null) {
+    const token = Object.keys(match.groups!).find(
+      (k) => match!.groups![k],
+    ) as TokenType;
+    const config = Tokens.get(token)!;
+    lines +=
+      typeof config.lines === "number" ? config.lines : config.lines(match[0]);
+    const errorString = config.errors?.(match[0]);
+    if (errorString) {
+      errors.push(error(lines, errorString));
+      continue;
+    }
+    if (!config.omit) {
+      if (config.toLiteral === null) {
+        yield new Token(token, match[0], lines);
+      } else {
+        yield new Token(token, match[0], lines, config.toLiteral(match[0]));
       }
     }
-    yield this.#addToken("EOF");
   }
-
-  #addToken(type: TokenType, lex = "", literal: unknown = null) {
-    return new Token(type, lex, literal, this.#line);
-  }
+  yield new Token("EOF", "", lines);
 }
