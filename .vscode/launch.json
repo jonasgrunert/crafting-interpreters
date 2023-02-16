@@ -12,7 +12,7 @@
         "--inspect-brk",
         "-A",
         "tdlox/index.ts",
-        "${input:fileName}"
+        "./tdlox/test/scripts/${input:fileName}.lox"
       ],
       "outputCapture": "std",
       "attachSimplePort": 9229

@@ -41,7 +41,7 @@ for await (const file of walk(ROOT, { includeDirs: false })) {
         ).then(JSON.parse) as Promise<{ tokens: Token[]; errors: string[] }>,
       ]);
       const scanner = new Scanner(source);
-      assertTokens(expected.tokens, scanner.scanTokens());
+      assertTokens(expected.tokens, [...scanner.scanTokens()]);
       assertEquals(scanner.errors, expected.errors);
     },
   );

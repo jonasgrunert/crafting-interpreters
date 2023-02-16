@@ -1,76 +1,117 @@
 import { error } from "./error.ts";
 
-const Tokens = [
+function createKeyword<Name extends string>(name: Name) {
+  return createLex(
+    name.toUpperCase() as Uppercase<Name>,
+    `(?<!\\w)${name}(?!\\w)`,
+  );
+}
+
+type LexOptions = {
+  omit?: boolean;
+  toLiteral?: ((lex: string) => unknown) | null;
+  lines?: number | ((lex: string) => number);
+  errors?: ((lex: string) => string | null) | null;
+};
+
+function createLex<Name extends string>(
+  name: Name,
+  regEx: string,
+  options: LexOptions = {},
+) {
+  return [
+    name,
+    Object.assign(
+      {
+        regEx,
+        omit: false,
+        toLiteral: null,
+        lines: 0,
+        errors: null,
+      },
+      options,
+    ),
+  ] as [Name, Required<LexOptions> & { regEx: string }];
+}
+
+const lexes = [
+  // Comments and Linebreaks
+  createLex("COMMENT" as const, "\\/\\/.*(?:\n|$)", {
+    omit: true,
+    lines: (s) => (s.endsWith("\n") ? 1 : 0),
+  }),
+  createLex("MULTILINECOMMENT" as const, "\\/\\*(?:.|\n)*?(?:\\*\\/|$)", {
+    omit: true,
+    lines: (s) => s.split("\n").length - 1,
+    errors: (s) =>
+      s.endsWith("*/") ? null : "Unterminated multiline comment.",
+  }),
+  // Keywords
+  createKeyword("and"),
+  createKeyword("class"),
+  createKeyword("else"),
+  createKeyword("false"),
+  createKeyword("fun"),
+  createKeyword("for"),
+  createKeyword("if"),
+  createKeyword("nil"),
+  createKeyword("or"),
+  createKeyword("print"),
+  createKeyword("return"),
+  createKeyword("super"),
+  createKeyword("this"),
+  createKeyword("true"),
+  createKeyword("var"),
+  createKeyword("while"),
+  //Literals
+  createLex("STRING" as const, '\\"[\\S\\s]*?(?:\\"|$)', {
+    toLiteral: (s) => s.slice(1, -1),
+    lines: (s) => s.split("\n").length - 1,
+    errors: (s) => (s.endsWith('"') ? null : "Unterminated string."),
+  }),
+  createLex("NUMBER" as const, "\\d+(\\.\\d+)?", {
+    toLiteral: (n) => Number.parseFloat(n),
+  }),
+  createLex("IDENTIFIER" as const, "[a-zA-Z_]\\w*"),
   // Single-character tokens.
-  "LEFT_PAREN",
-  "RIGHT_PAREN",
-  "LEFT_BRACE",
-  "RIGHT_BRACE",
-  "COMMA",
-  "DOT",
-  "MINUS",
-  "PLUS",
-  "SEMICOLON",
-  "SLASH",
-  "STAR",
-
+  createLex("LEFT_PAREN" as const, "\\("),
+  createLex("RIGHT_PAREN" as const, "\\)"),
+  createLex("LEFT_BRACE" as const, "\\{"),
+  createLex("RIGHT_BRACE" as const, "\\}"),
+  createLex("COMMA" as const, ","),
+  createLex("DOT" as const, "\\."),
+  createLex("MINUS" as const, "\\-"),
+  createLex("PLUS" as const, "\\+"),
+  createLex("SEMICOLON" as const, ";"),
+  createLex("SLASH" as const, "\\/"),
+  createLex("STAR" as const, "\\*"),
   // One or two character tokens.
-  "BANG",
-  "BANG_EQUAL",
-  "EQUAL",
-  "EQUAL_EQUAL",
-  "GREATER",
-  "GREATER_EQUAL",
-  "LESS",
-  "LESS_EQUAL",
-
-  // Literals.
-  "IDENTIFIER",
-  "STRING",
-  "NUMBER",
-
-  // Keywords.
-  "AND",
-  "CLASS",
-  "ELSE",
-  "FALSE",
-  "FUN",
-  "FOR",
-  "IF",
-  "NIL",
-  "OR",
-  "PRINT",
-  "RETURN",
-  "SUPER",
-  "THIS",
-  "TRUE",
-  "VAR",
-  "WHILE",
-
-  "EOF",
+  createLex("BANG_EQUAL" as const, "!="),
+  createLex("BANG" as const, "!"),
+  createLex("GREATER_EQUAL" as const, ">="),
+  createLex("GREATER" as const, ">"),
+  createLex("LESS_EQUAL" as const, "<="),
+  createLex("LESS" as const, "<"),
+  createLex("EQUAL_EQUAL" as const, "=="),
+  createLex("EQUAL" as const, "="),
+  createLex("EOF" as const, "\\s+", {
+    omit: true,
+    lines: (s) => s.split("\n").length - 1,
+  }),
+  createLex("UNKOWN_CHARACTER" as const, "\\S", {
+    omit: true,
+    errors: () => "Unexpected charachter.",
+  }),
 ] as const;
 
-type TokenType = typeof Tokens[number];
+type TokenType = `${typeof lexes[number][0]}`;
 
-const keywords: Map<string, TokenType> = new Map(
-  [
-    "and",
-    "class",
-    "else",
-    "false",
-    "for",
-    "fun",
-    "if",
-    "nil",
-    "or",
-    "print",
-    "return",
-    "super",
-    "this",
-    "true",
-    "var",
-    "while",
-  ].map((m) => [m, m.toUpperCase() as TokenType]),
+const Tokens: Map<string, ReturnType<typeof createLex>[1]> = new Map(lexes);
+const tokenRegEx = new RegExp(
+  [...Tokens.entries()]
+    .map(([key, value]) => `(?<${key}>${value.regEx})`)
+    .join("|"),
+  "g",
 );
 
 export class Token {
@@ -93,9 +134,6 @@ export class Token {
 
 export class Scanner {
   #source: string;
-  #tokens: Token[] = [];
-  #start = 0;
-  #current = 0;
   #line = 1;
   readonly errors: string[] = [];
 
@@ -103,189 +141,34 @@ export class Scanner {
     this.#source = source;
   }
 
-  get #isAtEnd() {
-    return this.#current >= this.#source.length;
-  }
-
-  scanTokens() {
-    while (!this.#isAtEnd) {
-      this.#start = this.#current;
-      this.#scanToken();
-    }
-    this.#tokens.push(new Token("EOF", "", null, this.#line));
-    return this.#tokens;
-  }
-
-  #scanToken() {
-    const c = this.#advance();
-    switch (c) {
-      case "(":
-        this.#addToken("LEFT_PAREN");
-        break;
-      case ")":
-        this.#addToken("RIGHT_PAREN");
-        break;
-      case "{":
-        this.#addToken("LEFT_BRACE");
-        break;
-      case "}":
-        this.#addToken("RIGHT_BRACE");
-        break;
-      case ",":
-        this.#addToken("COMMA");
-        break;
-      case ".":
-        this.#addToken("DOT");
-        break;
-      case "-":
-        this.#addToken("MINUS");
-        break;
-      case "+":
-        this.#addToken("PLUS");
-        break;
-      case ";":
-        this.#addToken("SEMICOLON");
-        break;
-      case "*":
-        this.#addToken("STAR");
-        break;
-      case "!":
-        this.#addToken(this.#match("=") ? "BANG_EQUAL" : "BANG");
-        break;
-      case "=":
-        this.#addToken(this.#match("=") ? "EQUAL_EQUAL" : "EQUAL");
-        break;
-      case "<":
-        this.#addToken(this.#match("=") ? "LESS_EQUAL" : "LESS");
-        break;
-      case ">":
-        this.#addToken(this.#match("=") ? "GREATER_EQUAL" : "GREATER");
-        break;
-      case "/":
-        if (this.#match("/")) {
-          while (this.#peek() !== "\n" && !this.#isAtEnd) this.#advance();
-        } else if (this.#match("*")) {
-          while (
-            this.#peek() !== "*" &&
-            this.#peekNext() !== "/" &&
-            !this.#isAtEnd
-          ) {
-            if (this.#peek() === "\n") this.#line++;
-            this.#advance();
-          }
-          if (this.#isAtEnd) {
-            this.errors.push(
-              error(this.#line, "Unterminated multiline comment."),
-            );
-            return;
-          }
-          this.#advance();
-          this.#advance();
+  *scanTokens() {
+    let match: RegExpExecArray | null;
+    while ((match = tokenRegEx.exec(this.#source)) != null) {
+      const token = Object.keys(match.groups!).find(
+        (k) => match!.groups![k],
+      ) as TokenType;
+      const config = Tokens.get(token)!;
+      this.#line +=
+        typeof config.lines === "number"
+          ? config.lines
+          : config.lines(match[0]);
+      const errorString = config.errors?.(match[0]);
+      if (errorString) {
+        this.errors.push(error(this.#line, errorString));
+        continue;
+      }
+      if (!config.omit) {
+        if (config.toLiteral === null) {
+          yield this.#addToken(token, match[0]);
         } else {
-          this.#addToken("SLASH");
+          yield this.#addToken(token, match[0], config.toLiteral(match[0]));
         }
-        break;
-      case " ":
-      case "\r":
-      case "\t":
-        // Ignore whitespace.
-        break;
-      case "\n":
-        this.#line++;
-        break;
-      case '"':
-        this.#string();
-        break;
-      default:
-        if (this.#isDigit(c)) {
-          this.#number();
-        } else if (this.#isAlpha(c)) {
-          this.#identifier();
-        } else {
-          this.errors.push(error(this.#line, `Unexpected character.`));
-        }
-        break;
+      }
     }
+    yield this.#addToken("EOF");
   }
 
-  #advance() {
-    return this.#source.charAt(this.#current++);
-  }
-
-  #match(expected: string) {
-    if (this.#isAtEnd) return false;
-    if (this.#source.charAt(this.#current) !== expected) return false;
-    this.#current++;
-    return true;
-  }
-
-  #peek() {
-    if (this.#isAtEnd) return "\0";
-    return this.#source.charAt(this.#current);
-  }
-
-  #peekNext() {
-    if (this.#current + 1 >= this.#source.length) return "\0";
-    return this.#source.charAt(this.#current + 1);
-  }
-
-  #isAlpha(c: string) {
-    return (c >= "a" && c <= "z") || (c >= "A" && c <= "Z") || c === "_";
-  }
-
-  #isAlphaNumeric(c: string) {
-    return this.#isAlpha(c) || this.#isDigit(c);
-  }
-
-  #string() {
-    while (this.#peek() != '"' && !this.#isAtEnd) {
-      if (this.#peek() === "\n") this.#line++;
-      this.#advance();
-    }
-
-    if (this.#isAtEnd) {
-      this.errors.push(error(this.#line, "Unterminated string."));
-      return;
-    }
-
-    this.#advance();
-    const value = this.#source.slice(this.#start + 1, this.#current - 1);
-    this.#addToken("STRING", value);
-  }
-
-  #isDigit(c: string) {
-    return c >= "0" && c <= "9";
-  }
-
-  #number() {
-    while (this.#isDigit(this.#peek())) this.#advance();
-
-    if (this.#peek() === "." && this.#isDigit(this.#peekNext())) {
-      this.#advance();
-      while (this.#isDigit(this.#peek())) this.#advance();
-    }
-
-    this.#addToken(
-      "NUMBER",
-      Number.parseFloat(this.#source.slice(this.#start, this.#current)),
-    );
-  }
-
-  #identifier() {
-    while (this.#isAlphaNumeric(this.#peek())) this.#advance();
-    const text = this.#source.slice(this.#start, this.#current);
-    const token = keywords.get(text) ?? "IDENTIFIER";
-    this.#addToken(token);
-  }
-
-  #addToken(type: TokenType, literal: unknown = null) {
-    this.#tokens.push(
-      new Token(
-        type,
-        this.#source.slice(this.#start, this.#current),
-        literal,
-        this.#line,
-      ),
-    );
+  #addToken(type: TokenType, lex = "", literal: unknown = null) {
+    return new Token(type, lex, literal, this.#line);
   }
 }
