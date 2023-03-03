@@ -1,0 +1,16 @@
+{
+  "tokens": [
+    { "type": "IDENTIFIER", "lexeme": "a", "literal": null, "line": 1 },
+    { "type": "EQUAL", "lexeme": "=", "literal": null, "line": 1 },
+    { "type": "IDENTIFIER", "lexeme": "d", "literal": null, "line": 1 },
+    { "type": "COMMA", "lexeme": ",", "literal": null, "line": 1 },
+    { "type": "NUMBER", "lexeme": "1235", "literal": 1235, "line": 1 },
+    { "type": "PLUS", "lexeme": "+", "literal": null, "line": 1 },
+    { "type": "NUMBER", "lexeme": "1", "literal": 1, "line": 1 },
+    { "type": "COMMA", "lexeme": ",", "literal": null, "line": 1 },
+    { "type": "STRING", "lexeme": "\"hello\"", "literal": "hello", "line": 1 },
+    { "type": "SEMICOLON", "lexeme": ";", "literal": null, "line": 1 },
+    { "type": "EOF", "lexeme": "", "literal": null, "line": 1 }
+  ],
+  "errors": []
+}

@@ -94,6 +94,8 @@ const lexes = [
   createLex("LESS" as const, "<"),
   createLex("EQUAL_EQUAL" as const, "=="),
   createLex("EQUAL" as const, "="),
+  createLex("QUESTION" as const, "\\?"),
+  createLex("COLON" as const, ":"),
   createLex("EOF" as const, "\\s+", {
     omit: true,
     lines: (s) => s.split("\n").length - 1,
@@ -104,7 +106,7 @@ const lexes = [
   }),
 ] as const;
 
-type TokenType = `${typeof lexes[number][0]}`;
+export type TokenType = typeof lexes[number][0];
 
 const Tokens: Map<string, ReturnType<typeof createLex>[1]> = new Map(lexes);
 const tokenRegEx = new RegExp(

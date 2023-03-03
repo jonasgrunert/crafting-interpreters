@@ -1,10 +1,12 @@
+import { Parser } from "./parser.ts";
+import { print } from "./printer.ts";
 import { scanTokens } from "./scanner.ts";
 
 function run(source: string) {
-  for (const token of scanTokens(source, [])) {
-    console.log(token);
-  }
-  return 65;
+  const parser = new Parser([...scanTokens(source, [])]);
+  const expr = parser.parse();
+  if (expr === null) return;
+  console.log(print(expr));
 }
 
 function runFile(path: string) {

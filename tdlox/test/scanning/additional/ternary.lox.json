@@ -1,0 +1,14 @@
+{
+  "tokens": [
+    { "type": "TRUE", "lexeme": "true", "literal": null, "line": 1 },
+    { "type": "QUESTION", "lexeme": "?", "literal": null, "line": 1 },
+    { "type": "NUMBER", "lexeme": "12", "literal": 12, "line": 1 },
+    { "type": "EQUAL_EQUAL", "lexeme": "==", "literal": null, "line": 1 },
+    { "type": "NUMBER", "lexeme": "5", "literal": 5, "line": 1 },
+    { "type": "COLON", "lexeme": ":", "literal": null, "line": 1 },
+    { "type": "NUMBER", "lexeme": "3", "literal": 3, "line": 1 },
+    { "type": "SEMICOLON", "lexeme": ";", "literal": null, "line": 1 },
+    { "type": "EOF", "lexeme": "", "literal": null, "line": 1 }
+  ],
+  "errors": []
+}

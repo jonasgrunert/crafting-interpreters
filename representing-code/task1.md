@@ -1,3 +1,4 @@
+```
 expr -> IDENTIFIER
 expr -> NUMBER
 expr -> expr followOnce
@@ -11,9 +12,11 @@ left -> "(" ")"
 left -> "(" expr additionalExpr ")"
 additionalExpr -> "," expr
 additionalExpr ->
+```
 
 Solution:
 
+```
 expr → expr calls
 expr → IDENTIFIER
 expr → NUMBER
@@ -27,3 +30,4 @@ call → "." IDENTIFIER
 
 arguments → expr
 arguments → arguments "," expr
+```
