@@ -185,25 +185,25 @@ export class Parser {
     }
     // Error productions.
     if (this.#match("BANG_EQUAL", "EQUAL_EQUAL")) {
-      error(this.#previous, "Missing left-hand operand.");
+      this.errors.push(error(this.#previous, "Missing left-hand operand."));
       this.#equality();
       return null;
     }
 
     if (this.#match("GREATER", "GREATER_EQUAL", "LESS", "LESS_EQUAL")) {
-      error(this.#previous, "Missing left-hand operand.");
+      this.errors.push(error(this.#previous, "Missing left-hand operand."));
       this.#comparison();
       return null;
     }
 
     if (this.#match("PLUS")) {
-      error(this.#previous, "Missing left-hand operand.");
+      this.errors.push(error(this.#previous, "Missing left-hand operand."));
       this.#term();
       return null;
     }
 
     if (this.#match("SLASH", "STAR")) {
-      error(this.#previous, "Missing left-hand operand.");
+      this.errors.push(error(this.#previous, "Missing left-hand operand."));
       this.#factor();
       return null;
     }

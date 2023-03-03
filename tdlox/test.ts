@@ -4,6 +4,8 @@ import {
   assertEquals,
   AssertionError,
 } from "https://deno.land/std@0.177.0/testing/asserts.ts";
+import { Parser } from "./parser.ts";
+import { print } from "./printer.ts";
 
 const ROOT = "tdlox/test/scripts";
 
@@ -46,3 +48,30 @@ for await (const file of walk(ROOT, { includeDirs: false })) {
     },
   );
 }
+
+Deno.test("Simple expression parsing", () => {
+  const parse = (code: string) => {
+    return print(new Parser([...scanTokens(code, [])]).parse());
+  };
+  const errors = (code: string) => {
+    const p = new Parser([...scanTokens(code, [])]);
+    p.parse();
+    return p.errors;
+  };
+  assertEquals(parse("-123 * (45.67)"), "(* (- 123) (group 45.67))");
+  assertEquals(parse("-123 - 1 * 10"), "(- (- 123) (* 1 10))");
+  assertEquals(parse("-(123 - 1) / 10"), "(/ (- (group (- 123 1))) 10)");
+  assertEquals(parse('"a" == "b", nil / 2'), "(, (== a b) (/ nil 2))");
+  assertEquals(parse('"a" == "b" ? nil : 2'), "(?(== a b) nil 2)");
+  assertEquals(errors("true ? nil"), [
+    "[line 1] Error at end: Expect : after then branch of conditional expression.",
+  ]);
+  assertEquals(errors("(true"), [
+    "[line 1] Error at end: Expect ')' after expression.",
+  ]);
+  for (const token of ["!=", "==", ">", ">=", "<", "<=", "+", "/", "*"]) {
+    assertEquals(errors(`${token} false`), [
+      `[line 1] Error at '${token}': Missing left-hand operand.`,
+    ]);
+  }
+});
